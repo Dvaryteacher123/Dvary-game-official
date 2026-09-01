@@ -1,0 +1,116 @@
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    padding-top: 120px;
+    background: var(--bg-primary);
+}
+
+.signup-container {
+    background: var(--bg-card);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    width: 100%;
+    max-width: 420px;
+    animation: slideUp 0.5s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.signup-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signup-logo h2 {
+    font-size: 32px;
+    color: var(--accent);
+}
+
+.signup-logo p {
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+.password-requirements {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+.password-requirements .valid {
+    color: var(--success);
+}
+
+.password-requirements .invalid {
+    color: var(--danger);
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.signup-btn:hover {
+    background: var(--accent-hover);
+    transform: scale(1.02);
+}
+
+.signup-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.signup-login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.signup-login-link a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-login-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .signup-page {
+        padding-top: 100px;
+    }
+    .signup-container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 25px;
+        margin: 10px;
+    }
+    .signup-logo h2 {
+        font-size: 26px;
+    }
+}
